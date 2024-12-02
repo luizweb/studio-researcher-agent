@@ -1,0 +1,9 @@
+{
+    "dockerfile_lines": [],
+    "graphs": {
+        "chatbot": "./src/agent.py:graph"
+    },
+    "env": "./.env",
+    "python_version": "3.11",
+    "dependencies": ["."]
+}
