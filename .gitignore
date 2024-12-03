@@ -1,6 +1,8 @@
 .env
 .langgraph_api
 .pytest_cache
+studio-project-template.code-workspace
+
 
 # Python-generated files
 __pycache__/
