@@ -1,20 +1,11 @@
-from typing import TypedDict, Literal
 from langgraph.graph import StateGraph
 from langgraph.prebuilt import tools_condition
 
 from utils.state import State
 from utils.nodes import chatbot, tool_node
 
-from dotenv import load_dotenv
-load_dotenv()
-
-# Define the config
-class GraphConfig(TypedDict):
-    model_name: Literal["anthropic", "openai"]
-
-
 # Build graph
-workflow = StateGraph(State, config_schema=GraphConfig)
+workflow = StateGraph(State)
 workflow.set_entry_point("chatbot")
 workflow.add_node("chatbot", chatbot)
 
