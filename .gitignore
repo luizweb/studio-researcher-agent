@@ -2,7 +2,7 @@
 .langgraph_api
 .pytest_cache
 studio-project-template.code-workspace
-
+files
 
 # Python-generated files
 __pycache__/
