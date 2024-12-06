@@ -5,6 +5,7 @@ description = "researcher-agent"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
+    "google-search-results>=2.4.2",
     "langchain-anthropic>=0.3.0",
     "langchain-community>=0.3.9",
     "langchain-ollama>=0.2.1",
