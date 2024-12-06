@@ -1,6 +1,7 @@
 from langchain_core.language_models import BaseLanguageModel
 from langchain_openai import ChatOpenAI
 from langchain_anthropic import ChatAnthropic
+from langchain_ollama import OllamaEmbeddings
 
 from config.settings import get_settings
 
@@ -30,6 +31,9 @@ class LLMProvider:
                 model=s.default_model,
                 temperature=s.temperature,
                 max_tokens=s.max_tokens
+            ),
+            "ollama_embedding": lambda s: OllamaEmbeddings(
+                model=s.embedding_model,
             )
         }
         

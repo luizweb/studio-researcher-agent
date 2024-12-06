@@ -1,15 +1,20 @@
 [project]
-name = "studio-project-template"
+name = "studio-researcher-agent"
 version = "0.1.0"
-description = "Add your description here"
+description = "researcher-agent"
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
     "langchain-anthropic>=0.3.0",
+    "langchain-community>=0.3.9",
+    "langchain-ollama>=0.2.1",
     "langchain-openai>=0.2.10",
     "langchain>=0.3.9",
     "langgraph-cli[inmem]==0.1.55",
     "langgraph>=0.2.53",
+    "pandas>=2.2.3",
+    "pinecone>=5.4.1",
+    "pypdf>=5.1.0",
     "python-dotenv>=1.0.1",
 ]
 

@@ -5,8 +5,8 @@ from functools import lru_cache
 from typing import Optional
 from pydantic import BaseModel, Field
 
-from dotenv import load_dotenv
-load_dotenv()
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv(), override=True)
 
 
 def setup_logging():
@@ -39,6 +39,7 @@ class OllamaSettings(LLMSettings):
     base_url: str = Field(default="http://0.0.0.0:11434/v1")
     api_key: str = Field(default="ollama")
     default_model: str = Field(default="llama3.2")
+    embedding_model: str = Field(default="nomic-embed-text")
 
 
 
@@ -48,6 +49,7 @@ class Settings(BaseModel):
     openai: OpenAISettings = Field(default_factory=OpenAISettings)
     anthropic: AnthropicSettings = Field(default_factory=AnthropicSettings)
     ollama: OllamaSettings = Field(default_factory=OllamaSettings)
+    ollama_embedding: OllamaSettings = Field(default_factory=OllamaSettings)
 
 
 @lru_cache()
